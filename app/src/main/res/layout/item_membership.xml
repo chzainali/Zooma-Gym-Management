@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_cancel_24"
+                app:tint="@color/primary"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/tvHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Membership"
+                android:textColor="@color/primary"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLabel"
+                android:layout_below="@+id/tvHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Click on below to change the membership of the User."
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_below="@+id/tvLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMonthly"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Monthly"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginVertical="15dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_corners"
+                    android:backgroundTint="@color/primary"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnYearly"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Yearly"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_corners"
+                    android:backgroundTint="@color/primary"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNone"
+                android:layout_below="@+id/llMain"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Not Active"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_corners"
+                android:backgroundTint="@color/primary"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

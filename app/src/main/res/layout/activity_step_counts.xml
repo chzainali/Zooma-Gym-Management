@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.StepCountsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            tools:context=".admin.MapsActivity" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/avgSpeedText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="10dp"
+                android:text="0.00 KM/H"
+                android:textSize="22sp"
+                android:gravity="end"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/holo_green_dark"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView9"/>
+
+
+            <TextView
+                android:id="@+id/durationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="10dp"
+                android:text="00:00:00"
+                android:textSize="22sp"
+                android:gravity="end"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/holo_green_dark"
+                app:layout_constraintBaseline_toBaselineOf="@+id/duration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/duration"/>
+
+
+            <TextView
+                android:id="@+id/distanceText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="10dp"
+                android:text="0.00 KM"
+                android:textSize="22sp"
+                android:gravity="end"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/holo_green_dark"
+                app:layout_constraintBaseline_toBaselineOf="@+id/distance"
+                app:layout_constraintStart_toEndOf="@+id/distance"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/counterText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="10dp"
+                android:gravity="end"
+                android:textSize="22sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/holo_green_dark"
+                app:layout_constraintBaseline_toBaselineOf="@+id/counter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/counter"/>
+
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:text="Duration:"
+                android:textSize="22sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:text="Average speed:"
+                android:textSize="22sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/distance" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:text="Distance run:"
+                android:textSize="22sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/counter" />
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:text="Steps Counter"
+                android:textSize="22sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="onClickPlay"
+                android:text="START" />
+
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:onClick="onClickStop"
+                android:text="STOP" />
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

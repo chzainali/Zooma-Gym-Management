@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ZoomaGymManagement"
+        tools:targetApi="31">
+        <activity
+            android:name=".model.CapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".member.ui.home.AttendanceHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".member.ui.home.TakeAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.CodeDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.QrCodesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.MapsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.StepCountsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.MembersGoalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.MembersProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.MembersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.SubmitFeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.FeedbackDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.FitnessPlanDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddFitnessPlansActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.FitnessPlansActivity"
+            android:exported="false" />
+        <activity
+            android:name=".member.ui.goals.GoalDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".member.ui.profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".member.MemberMainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_member_main" />
+        <activity
+            android:name=".admin.AdminMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".member.MainActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".service.LocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name=".stepcounter.utils.JourneyProvider"
+            android:authorities="com.example.zoomagymmanagement.stepcounter.utils.JourneyProvider"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <receiver
+            android:name=".stepcounter.receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

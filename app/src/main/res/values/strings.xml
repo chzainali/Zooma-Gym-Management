@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Zooma Gym Management</string>
+    <string name="title_activity_member_main">MemberMainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_goals">Goals</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="view_profile"><u>View Profile</u></string>
+    <string name="view_goals"><u>View Goals</u></string>
+    <string name="view_attendance"><u>View Attendance</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyAZ6df2DrqkaZLPYjUMX4D_4iMCqeFMsZ0
+    </string>
+</resources>

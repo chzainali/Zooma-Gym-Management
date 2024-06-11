@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".member.ui.goals.GoalDetailsFragment">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="15dp"
+        android:text="Goal Details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:paddingHorizontal="10dp"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvHeading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeading">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:layout_margin="15dp"
+                    app:contentPadding="5dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="10dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.4"
+                                android:text="Goal Type: "
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvType"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text="Goal Type"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.4"
+                                android:text="Goal Title: "
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text="Goal Title"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.4"
+                                android:text="Target Duration: "
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvTargetDuration"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text="Target Duration"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.4"
+                                android:text="Achieved Duration: "
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvAchievedDuration"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.6"
+                                android:text="Achieved Duration"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="5dp"
+                            android:gravity="center">
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/pieChart"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_gravity="center" />
+
+                            <TextView
+                                android:id="@+id/rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rate"
+                                android:layout_marginHorizontal="10dp"
+                                android:textColor="@color/primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:id="@+id/tvDateTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date Time"
+                            android:layout_marginTop="10dp"
+                            android:gravity="end"
+                            android:textColor="@color/primary"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDelete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/bg_corners"
+                        android:backgroundTint="@color/primary"
+                        android:text="Delete"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/bg_corners"
+                        android:backgroundTint="@color/primary"
+                        android:text="Update"
+                        android:textColor="@color/white" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

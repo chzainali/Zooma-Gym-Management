@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.zoomagymmanagement.member.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_attendanceFragment"
+            app:destination="@id/attendanceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_goals"
+        android:name="com.example.zoomagymmanagement.member.ui.goals.GoalsFragment"
+        android:label="@string/title_goals"
+        tools:layout="@layout/fragment_goals" >
+        <action
+            android:id="@+id/action_navigation_goals_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+        <action
+            android:id="@+id/action_navigation_goals_to_goalDetailsFragment"
+            app:destination="@id/goalDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.zoomagymmanagement.member.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addGoalFragment"
+        android:name="com.example.zoomagymmanagement.member.ui.goals.AddGoalFragment"
+        android:label="fragment_add_goal"
+        tools:layout="@layout/fragment_add_goal" />
+    <fragment
+        android:id="@+id/goalDetailsFragment"
+        android:name="com.example.zoomagymmanagement.member.ui.goals.GoalDetailsFragment"
+        android:label="fragment_goal_details"
+        tools:layout="@layout/fragment_goal_details" >
+        <action
+            android:id="@+id/action_goalDetailsFragment_to_addGoalFragment"
+            app:destination="@id/addGoalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.example.zoomagymmanagement.member.ui.home.AttendanceFragment"
+        android:label="fragment_attendance"
+        tools:layout="@layout/fragment_attendance" />
+</navigation>

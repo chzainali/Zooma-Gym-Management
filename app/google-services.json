@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "149140267074",
+    "project_id": "zooma-gym-management",
+    "storage_bucket": "zooma-gym-management.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149140267074:android:8d1bb7fb609b069fdf0ddb",
+        "android_client_info": {
+          "package_name": "com.example.zoomagymmanagement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL71kvSRDwfhSZ-IoxLSovXZqpgVmRG9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
